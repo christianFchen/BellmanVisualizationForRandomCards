@@ -135,7 +135,7 @@ Even with optimal play, variance dominates the outcome. However, the Bellman pol
 ## Strategy Breakdown
 
 - **Early Game:** Induce variance by occasionally guessing the minority color to diverge from naive strategies.  
-- **Mid Game:** Guess based on conditional probabilities to maximize expected correct guesses.  
+- **Mid Game:** Guess based on conditional probabilities to maximize expected correct guesses (if ahead). Increase variance by guessing the minority color more frequently if about even with the opponent's Ev or behind.
 - **End Game:**  
   - If ahead: play conservatively.  
   - If behind: increase variance by consistently guessing the minority color.
