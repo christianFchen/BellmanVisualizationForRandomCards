@@ -33,9 +33,9 @@ $$
 
 Where:
 
-- \( R \): number of red cards remaining  
-- \( B \): number of black cards remaining  
-- \( C \): current number of correct guesses
+- \(R\): number of red cards remaining  
+- \(B\): number of black cards remaining  
+- \(C\): current number of correct guesses
 
 The possible actions are:
 
@@ -47,8 +47,8 @@ $$
 
 ## Transition Dynamics
 
-The state transitions depend on the true color drawn (revealed after guessing), updating \( R \), \( B \), and \( C \) accordingly.  
-The process continues until \( R + B = 0 \).
+The state transitions depend on the true color drawn (revealed after guessing), updating \(R\), \(B\), and \(C\) accordingly.  
+The process continues until \(R + B = 0\).
 
 ---
 
@@ -96,12 +96,12 @@ $$
 
 ## Monte Carlo Simulation
 
-We simulate \( 100{,}000 \) games under the Bellman-optimal policy:
+We simulate \(100{,}000\) games under the Bellman-optimal policy:
 
 1. Shuffle and draw cards sequentially.
 2. Use the Bellman-optimal action at each state.
 3. Sample opponent scores from \( \mathcal{N}(28, 3^2) \).
-4. Estimate the probability that our score exceeds the opponents’ maximum.
+4. Estimate the probability that our score exceeds the opponent's maximum.
 
 ---
 
