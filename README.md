@@ -184,6 +184,7 @@ While randomness ensures no guaranteed win, the optimal policy significantly imp
 ├── requirements.txt # Python dependencies
 ├── .gitignore # Files and directories to ignore in Git
 ├── LICENSE # Open-source license
+├── MDP and Bellman Implementation # pdf of mathematical explanation written out
 ├── figures/ # Generated visualizations from simulations
 │ ├── bellman_hist_vs_opponentMax.png
 │ ├── bellman_histogram_opponent.png
