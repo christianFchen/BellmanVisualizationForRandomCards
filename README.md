@@ -1,3 +1,19 @@
+## How to Run
+```bash
+
+Clone the repository and install dependencies:
+
+
+git clone https://github.com/christianFchen/BellmanVisualizationForRandomCards
+cd BellmanVisualizationForRandomCards
+python -m venv venv
+source venv/bin/activate    # On macOS/Linux
+venv\Scripts\activate       # On Windows
+pip install -r requirements.txt
+```
+# Run the simulation
+python BellmanModel.py
+
 # Optimal Guessing Strategy Using Markov Decision Processes and Monte Carlo Simulation
 
 ## Problem Statement
