@@ -148,7 +148,7 @@ Even with optimal play, variance dominates the outcome. However, the Bellman pol
 
 The histogram shows the distribution of total correct guesses across 100,000 simulations under the Bellman-optimal policy.
 
-![Monte Carlo Distribution](figures/bellman_hist_vs_opponentMax.png)
+![Monte Carlo Distribution](figures/bellman_histogram_opponent.png)
 
 ---
 
@@ -157,7 +157,7 @@ The histogram shows the distribution of total correct guesses across 100,000 sim
 Comparison of our score distribution (red) vs. maximum opponent distribution (blue).  
 Despite optimization, the heavy right tail of the opponent distribution shows the variance challenge.
 
-![Score vs Opponent](figures/bellman_histogram_opponent.png)
+![Score vs Opponent](figures/bellman_hist_vs_opponentMax.png)
 
 ---
 
