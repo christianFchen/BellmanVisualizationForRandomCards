@@ -178,6 +178,7 @@ While randomness ensures no guaranteed win, the optimal policy significantly imp
 ---
 
 ## Project Structure
+```
 ├── BellmanModel.py # Main script running Bellman MDP simulation and Monte Carlo analysis
 ├── README.md # Documentation, math, results, and usage instructions
 ├── requirements.txt # Python dependencies
@@ -187,4 +188,5 @@ While randomness ensures no guaranteed win, the optimal policy significantly imp
 │ ├── bellman_hist_vs_opponentMax.png
 │ ├── bellman_histogram_opponent.png
 │ └── bellman_heatmap.png
+```
 
