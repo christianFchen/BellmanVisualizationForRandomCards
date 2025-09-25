@@ -33,9 +33,9 @@ $$
 
 Where:
 
-- \(R\): number of red cards remaining  
-- \(B\): number of black cards remaining  
-- \(C\): current number of correct guesses
+- $R$: number of red cards remaining  
+- $B$: number of black cards remaining  
+- $C$: current number of correct guesses
 
 The possible actions are:
 
@@ -47,8 +47,8 @@ $$
 
 ## Transition Dynamics
 
-The state transitions depend on the true color drawn (revealed after guessing), updating \(R\), \(B\), and \(C\) accordingly.  
-The process continues until \(R + B = 0\).
+The state transitions depend on the true color drawn (revealed after guessing), updating $R$, $B$, and $C$ accordingly.  
+The process continues until $R + B = 0$.
 
 ---
 
@@ -74,7 +74,7 @@ $$
 V_{\text{black}} = \frac{B}{R + B} V(R, B - 1, C + 1) + \frac{R}{R + B} V(R - 1, B, C)
 $$
 
-The optimal policy selects the action that maximizes \( V(R, B, C) \) at every state.
+The optimal policy selects the action that maximizes $V(R, B, C)$ at every state.
 
 ---
 
@@ -96,11 +96,11 @@ $$
 
 ## Monte Carlo Simulation
 
-We simulate \(100{,}000\) games under the Bellman-optimal policy:
+We simulate $100{,}000$ games under the Bellman-optimal policy:
 
 1. Shuffle and draw cards sequentially.
 2. Use the Bellman-optimal action at each state.
-3. Sample opponent scores from \( \mathcal{N}(28, 3^2) \).
+3. Sample opponent scores from $\mathcal{N}(28, 3^2)$.
 4. Estimate the probability that our score exceeds the opponent's maximum.
 
 ---
@@ -110,59 +110,4 @@ We simulate \(100{,}000\) games under the Bellman-optimal policy:
 | Metric | Value |
 |--------|-------|
 | Mean correct guesses (optimal policy) | ~29.0 |
-| Standard deviation | ~2.2 |
-| Monte Carlo win probability | ~0.17 – 0.20 |
-| Expected opponent max score | ~30.8 – 31.0 |
-
-**Interpretation:**  
-Even with optimal play, variance dominates the outcome. However, the Bellman policy improves win probability from approximately 10–12% (random guessing) to 17–20%.
-
----
-
-## Strategy Breakdown
-
-- **Early Game:** Induce variance by occasionally guessing the minority color to diverge from naive strategies.  
-- **Mid Game:** Guess based on conditional probabilities to maximize expected correct guesses.  
-- **End Game:**  
-  - If ahead: play conservatively.  
-  - If behind: increase variance by consistently guessing the minority color.
-
----
-
-## Visualizations
-
-### 1. Monte Carlo Score Distribution
-
-The histogram shows the distribution of total correct guesses across 100,000 simulations under the Bellman-optimal policy.
-
-![Monte Carlo Distribution](figures/bellman_hist_vs_opponentMax.png)
-
----
-
-### 2. Score Distribution vs. Opponent Maximum
-
-Comparison of our score distribution (red) vs. maximum opponent distribution (blue).  
-Despite optimization, the heavy right tail of the opponent distribution shows the variance challenge.
-
-![Score vs Opponent](figures/bellman_histogram_opponent.png)
-
----
-
-### 3. Bellman-Optimal Policy Heatmap
-
-Decision boundary of the Bellman-optimal policy.  
-Red = optimal to guess red. Blue = optimal to guess black.
-
-![Bellman Heatmap](figures/bellman_heatmap.png)
-
----
-
-## Conclusion
-
-This project demonstrates how **Markov Decision Processes** and **Bellman dynamic programming** can optimize decisions in a high-variance competitive guessing game.  
-While randomness ensures no guaranteed win, the optimal policy significantly improves the probability of winning against 10 probabilistic opponents.
-
----
-
-## Project Structure
-
+| Sta
