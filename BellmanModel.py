@@ -25,6 +25,7 @@ def V(R,B,C):
         return win_probability(C)
     
     total=R+B
+    
     ##red guesses
     RG=0    
     if R>0:
@@ -172,8 +173,16 @@ def heatMapOfBellman(grid):
     plt.show()
 
 
+def calculate_bellman_with_new_params():
+    global dist_others, std_others
+    dist_others = 26
+    std_others = 2
+    V.cache_clear() 
+    print("Win Probability with new parameters (dist_others=26, std_others=2):", V(26, 26, 0))
 
 print ("Win Probability with Bellman:", V(26,26,0)) #calculated via vectorized bellman equation
+
+calculate_bellman_with_new_params() #calculate bellman with niave opponent parameters
 
 runsimulation()
 my_scores = [simulation()[0] for i in range(n)]
