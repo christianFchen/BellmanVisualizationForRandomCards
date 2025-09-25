@@ -4,7 +4,7 @@ from functools import lru_cache
 
 
 dist_others=26 #assume oppenents guess exactly half right (p=0.5)
-std_others=2.0 #now imagine that they may be a bit better or worse than that, so we give them a standard deviation of 2
+std_others=2.0 #now imagine that they may be a bit better or worse than that, so we give them a +- 2 cards from 26 deviation.
 number_others=10 #10 opponents
 
 ## our win probability can be calculated viewing the normal distribution of the other players and calculating the probability that our score C is greater than theirs
